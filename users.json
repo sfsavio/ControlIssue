@@ -1,0 +1,15 @@
+[
+    {
+        "username": "admin",
+        "password": "Ms0405",
+        "nome": "Sávio Fontana - Administrador",
+        "is_admin": true
+    },
+    {
+        "username": "1076",
+        "password": "1234",
+        "nome": "Sávio Fontana",
+        "is_admin": false
+    }
+
+]

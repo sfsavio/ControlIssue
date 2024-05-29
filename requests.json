@@ -1,0 +1,50 @@
+[
+    {
+        "assunto": "Mouse",
+        "setor": "Assesoria",
+        "descricao": "Mouse com duplo clique.",
+        "datetime": "2024-05-29 09:24:15",
+        "username": "admin",
+        "status": "solucionado"
+    },
+    {
+        "assunto": "Dom\u00ednio",
+        "setor": "departamento_pessoal",
+        "descricao": "Agente do dom\u00ednio est\u00e1 offline.",
+        "datetime": "2024-05-29 11:54:53",
+        "username": "admin",
+        "status": "solucionado"
+    },
+    {
+        "assunto": "Teste",
+        "setor": "departamento_pessoal",
+        "descricao": "Ponto fora do ar!!!\r\n",
+        "datetime": "2024-05-29 12:38:14",
+        "username": "admin",
+        "status": "solucionado"
+    },
+    {
+        "assunto": "Dom\u00ednio",
+        "setor": "departamento_pessoal",
+        "descricao": "Dom\u00ednio n\u00e3o est\u00e1 funcionando.",
+        "datetime": "2024-05-29 15:23:46",
+        "username": "1076",
+        "status": "solucionado"
+    },
+    {
+        "assunto": "Teste",
+        "setor": "recepcao_principal",
+        "descricao": "Teste",
+        "datetime": "2024-05-29 15:48:29",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "teste",
+        "setor": "assesoria",
+        "descricao": "teste teste",
+        "datetime": "2024-05-29 15:49:06",
+        "username": "1076",
+        "status": "pendente"
+    }
+]
