@@ -13,19 +13,42 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['nome'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Início</title>
+    <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Seja bem-vindo, <?php echo htmlspecialchars($_SESSION['nome']); ?>!</h2> <!-- Display the user's name -->
-    <!-- Checa se o usuário tem as permissões de administrador -->
-    <?php if ($_SESSION['is_admin']): ?> 
-        <!-- Somente para admins -->
-        <p><a href="view_backlog.php">Login Backlog</a></p>
-        <p><a href="manage_requests.php">Gerenciar Chamados</a></p>
-    <?php endif; ?>
+    <header>
+        <nav>
+            <div class="usuario">
+                <p>Seja bem-vindo, <span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p> <!-- Display the user's name -->
+            </div>
+            <div class="sair">
+                <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="menu">
+             <!-- Para todos os usuários -->
+            <p class="home_shortcut"><a href="home.php">Início</a></p>
+            <p><a href="request_form.php">Criar chamado</a></p>
+
+            <!-- Checa se o usuário tem as permissões de administrador -->
+            <?php if ($_SESSION['is_admin']): ?> 
+            <!-- Somente para admins -->
+                <p><a href="view_backlog.php">Login Backlog</a></p>
+                <p><a href="manage_requests.php">Gerenciar Chamados</a></p>
+            <?php endif; ?>
     
-    <!-- Para todos os usuários -->
-    <a href="request_form.php">Criar chamado</a> <br> <br>
-    <a href="logout.php">Logout</a> <!-- Logout link -->
+
+
+        </div>
+        <div class="content">
+            
+        </div>
+    </main>    
 </body>
 </html>
