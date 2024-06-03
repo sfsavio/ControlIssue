@@ -53,12 +53,41 @@ $requests = loadRequests(); // Load existing requests
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Requests</title>
-    <link rel="stylesheet" type="text/css" href="./styles/manage_requests.css">
+    <link rel="stylesheet" type="text/css" href="./styles/manage_requests.css"><link rel="stylesheet" type="text/css" href="./styles/view_requests.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Gerenciar Chamados</h2>
+    
+  <header>
+        <nav>
+            <div class="usuario">
+                <p>Seja bem-vindo, <span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p> <!-- Display the user's name -->
+            </div>
+            <div class="sair">
+                <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="menu">
+             <!-- Para todos os usuários -->
+            <p class="home_shortcut"><a href="home.php">Início</a></p>
+            <p><a href="request_form.php">Criar chamado</a></p>
 
-    <?php
+            <!-- Checa se o usuário tem as permissões de administrador -->
+            <?php if ($_SESSION['is_admin']): ?> 
+            <!-- Somente para admins -->
+                <p><a href="view_backlog.php">Login Backlog</a></p>
+                <p class="create"><a href="manage_requests.php">Gerenciar Chamados</a></p>
+            <?php endif; ?>
+    
+
+
+        </div>
+        <div class="content">
+            <?php
     if (isset($_GET['error'])) {
         echo '<p style="color: red;">' . htmlspecialchars($_GET['error']) . '</p>';
     } elseif (isset($_GET['success'])) {
@@ -88,7 +117,7 @@ $requests = loadRequests(); // Load existing requests
                         <td><?php echo ($request['assunto']); ?></td>
                         <!-- Not necessary in this case - htmlspecialchars() -->
                         <td><?php echo htmlspecialchars($request['setor']); ?></td> 
-                        <td><?php echo htmlspecialchars($request['descricao']); ?></td>
+                        <td><div id="over"><?php echo htmlspecialchars($request['descricao']); ?></div></td>
                         <td><?php echo htmlspecialchars($request['datetime']); ?></td>
                         <td><?php echo htmlspecialchars($request['username']); ?></td>
                         <td><?php echo htmlspecialchars($request['status']); ?></td>
@@ -115,6 +144,13 @@ $requests = loadRequests(); // Load existing requests
             echo $index+1;
          ?>
     </p>
+
+
+
+
+        </div>
+    </main>  
+    
 
     
 </body>
