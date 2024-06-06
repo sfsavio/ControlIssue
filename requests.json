@@ -5,7 +5,7 @@
         "descricao": "PLacas Offiline",
         "datetime": "2024-06-06 09:28:07",
         "username": "admin",
-        "status": "solucionado"
+        "status": "pendente"
     },
     {
         "assunto": "convenio",
@@ -29,6 +29,462 @@
         "descricao": "",
         "datetime": "2024-06-06 09:39:01",
         "username": "1076",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de cartao",
+        "setor": "CME",
+        "descricao": "",
+        "datetime": "2024-06-06 10:34:58",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "convenio",
+        "setor": "assesoria",
+        "descricao": "Teste",
+        "datetime": "2024-06-06 11:19:25",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "clinica m\u00e9dica",
+        "descricao": "",
+        "datetime": "2024-06-06 11:37:01",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "recep\u00e7\u00e3o principal",
+        "descricao": "Leitor parou!",
+        "datetime": "2024-06-06 12:42:21",
+        "username": "1076",
+        "status": "solucionado"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "CME",
+        "descricao": "teste",
+        "datetime": "2024-06-06 12:44:06",
+        "username": "admin1",
+        "status": "pendente"
+    },
+    {
+        "assunto": "monitor",
+        "setor": "almoxarifado",
+        "descricao": "teste\r\n",
+        "datetime": "2024-06-06 12:55:11",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "assesoria",
+        "descricao": "teste ",
+        "datetime": "2024-06-06 13:31:26",
+        "username": "1024",
+        "status": "pendente"
+    },
+    {
+        "assunto": "convenio",
+        "setor": "compras",
+        "descricao": "teste\r\n\r\n\r\n",
+        "datetime": "2024-06-06 15:11:56",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "convenio",
+        "setor": "assesoria",
+        "descricao": "asdads",
+        "datetime": "2024-06-06 15:58:56",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de cartao",
+        "setor": "CME",
+        "descricao": "teste",
+        "datetime": "2024-06-06 16:02:57",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "convenio",
+        "setor": "assesoria",
+        "descricao": "",
+        "datetime": "2024-06-06 16:04:20",
+        "username": "admin",
+        "status": "pendente"
+    },
+    {
+        "assunto": "convenio",
+        "setor": "assesoria",
+        "descricao": "",
+        "datetime": "2024-06-06 16:04:23",
+        "username": "admin",
         "status": "pendente"
     }
 ]

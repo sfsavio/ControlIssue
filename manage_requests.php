@@ -50,13 +50,13 @@ $requests = loadRequests(); // Load existing requests
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Refresh page every N seconds -->
-    <meta http-equiv="refresh" content="5">
+    <!-- <meta http-equiv="refresh" content="5"> -->
     <title>Manage Requests</title>
     <link rel="stylesheet" type="text/css" href="./styles/manage_requests.css">
     <link rel="stylesheet" type="text/css" href="./styles/view_requests.css">
@@ -68,78 +68,86 @@ $requests = loadRequests(); // Load existing requests
 </head>
 
 <body>
-    <!-- Display the user's name -->
-    <p>Seja bem-vindo, <span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p>
+    <header>
+        <nav>
+            <p><span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p>
+            <!-- Display the user's name -->
+            <!-- Para todos os usuários -->
+            <p class="home_shortcut"><a href="home.php">Início</a></p>
 
-    <!-- Para todos os usuários -->
-    <p class="home_shortcut"><a href="home.php">Início</a></p>
-    <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
-    <p><a href="request_form.php">Criar chamado</a></p>
+            <p class="create"><a href="request_form.php">Criar chamado</a></p>
 
-    <!-- Checa se o usuário tem as permissões de administrador -->
-    <?php if ($_SESSION['is_admin']): ?>
-        <!-- Somente para admins -->
-        <p><a href="view_backlog.php">Login Backlog</a></p>
-        <p class="create"><a href="manage_requests.php">Gerenciar Chamados</a></p>
-    <?php endif; ?>
+            <!-- Checa se o usuário tem as permissões de administrador -->
+            <?php if ($_SESSION['is_admin']): ?>
+                <!-- Somente para admins -->
+                <p><a href="view_backlog.php">Login Backlog</a></p>
 
-    <?php
-    if (isset($_GET['error'])) {
-        echo '<p style="color: red;">' . htmlspecialchars($_GET['error']) . '</p>';
-    } elseif (isset($_GET['success'])) {
-        echo '<p style="color: green;">' . htmlspecialchars($_GET['success']) . '</p>';
-    }
-    ?>
-    <?php if (empty($requests)): ?>
-        <p>No requests available.</p>
-    <?php else: ?>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Assunto</th>
-                    <th>Setor</th>
-                    <th>Descrição</th>
-                    <th>Data e Hora</th>
-                    <th>Usuário</th>
-                    <th>Status</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($requests as $index => $request): ?>
-                    <tr>
-                        <td><?php echo $index; ?></td>
-                        <td><?php echo ($request['assunto']); ?></td>
-                        <!-- Not necessary in this case - htmlspecialchars() -->
-                        <td><?php echo htmlspecialchars($request['setor']); ?></td>
-                        <td>
-                            <?php echo htmlspecialchars($request['descricao']); ?>
-                        </td>
-                        <td><?php echo htmlspecialchars($request['datetime']); ?></td>
-                        <td><?php echo htmlspecialchars($request['username']); ?></td>
-                        <td><?php echo htmlspecialchars($request['status']); ?></td>
-                        <td>
-                            <form action="manage_requests.php" method="post" style="display: inline;">
-                                <input type="hidden" name="request_id" value="<?php echo $index; ?>">
-                                <select name="status">
-                                    <option value="pendente" <?php if ($request['status'] == 'pendente')
-                                        echo 'selected'; ?>>
-                                        Pendente</option>
-                                    <option value="solucionado" <?php if ($request['status'] == 'solucionado')
-                                        echo 'selected'; ?>>Solucionado</option>
-                                </select>
-                                <input type="submit" value="Update">
-                            </form>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php endif; ?>
-    <br>
+                <p><a href="manage_requests.php">Gerenciar Chamados</a></p>
+            <?php endif; ?>
 
+            <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
+        </nav>
+    </header>
+    <main>
+        <section>
+            <?php
+            if (isset($_GET['error'])) {
+                echo '<p style="color: red;">' . htmlspecialchars($_GET['error']) . '</p>';
+            } elseif (isset($_GET['success'])) {
+                echo '<p style="color: green;">' . htmlspecialchars($_GET['success']) . '</p>';
+            }
+            ?>
+            <?php if (empty($requests)): ?>
+                <p>No requests available.</p>
+            <?php else: ?>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th><a href="#fim">Id</a></th>
+                            <th>Assunto</th>
+                            <th>Setor</th>
+                            <th>Descrição</th>
+                            <th>Data e Hora</th>
+                            <th>Usuário</th>
+                            <!-- <th>Status</th> -->
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($requests as $index => $request): ?>
+                            <tr>
+                                <td><?php echo $index; ?></td>
+                                <td><?php echo ($request['assunto']); ?></td>
+                                <!-- Not necessary in this case - htmlspecialchars() -->
+                                <td><?php echo htmlspecialchars($request['setor']); ?></td>
+                                <td>
+                                    <?php echo htmlspecialchars($request['descricao']); ?>
+                                </td>
+                                <td><?php echo htmlspecialchars($request['datetime']); ?></td>
+                                <td><?php echo htmlspecialchars($request['username']); ?></td>
+                                <!-- <td><?php echo htmlspecialchars($request['status']); ?></td> -->
+                                <td>
+                                    <form action="manage_requests.php" method="post" style="display: flex; flex-direction: column; text-align: center;">
+                                        <input type="hidden" name="request_id" value="<?php echo $index; ?>">
+                                        <select name="status">
+                                            <option value="pendente" <?php if ($request['status'] == 'pendente')
+                                                echo 'selected'; ?>>
+                                                Pendente</option>
+                                            <option value="solucionado" <?php if ($request['status'] == 'solucionado')
+                                                echo 'selected'; ?>>Solucionado</option>
+                                        </select>
+                                        <input type="submit" value="Atualizar" id="att">
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php endif; ?>  
+            <br>
 
+        </section>
+    </main>
 </body>
 
 </html>

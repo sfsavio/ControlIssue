@@ -23,14 +23,16 @@ if (isset($_GET['error'])) {
 </head>
 
 <body>
-    <h2>Entrar</h2>
+    <main>
+        <div class="card">
+            <h2>Entrar</h2>
     <!-- Prints one of the two message errors -->
-    <p class="status">Status:&nbsp</p>
-    <?php
-    if (isset($_GET['error'])) {
-        echo '<p>' . ' ' . htmlspecialchars($_GET['error']) . '</p>';
-    }
-    ?>
+    <!-- <p class="status">Status:&nbsp</p> -->
+   <?php
+  //  if (isset($_GET['error'])) {
+     //   echo '<p>' . ' ' . htmlspecialchars($_GET['error']) . '</p>';
+  //  }
+  //  ?>
     <!-- Login form -->
     <form action="login.php" method="post">
         <label for="username">Usuário/Matrícula:</label><br>
@@ -40,6 +42,8 @@ if (isset($_GET['error'])) {
         <!-- <input type="submit" value="Login"> -->
         <button type="submit">Entrar</button>
     </form>
+        </div>
+    </main>  
 </body>
 
 </html>

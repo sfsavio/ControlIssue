@@ -29,7 +29,7 @@ $loginBacklog = array_reverse($loginBacklog); // Inverte a ordem do array para e
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Backlog</title>
-    <link rel="stylesheet" type="text/css" href="./styles/viewbacklog.css">
+    <link rel="stylesheet" type="text/css" href="./styles/view_backlog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -40,43 +40,56 @@ $loginBacklog = array_reverse($loginBacklog); // Inverte a ordem do array para e
 <body>
     <header>
         <nav>
-            <div class="usuario">
-                <p>Seja bem-vindo, <span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p>
-                <!-- Display the user's name -->
-            </div>
-            <div class="sair">
-                <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
-            </div>
+            <p><span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p>
+            <!-- Display the user's name -->
+            <!-- Para todos os usuários -->
+            <p class="home_shortcut"><a href="home.php">Início</a></p>
+
+            <p class="create"><a href="request_form.php">Criar chamado</a></p>
+
+            <!-- Checa se o usuário tem as permissões de administrador -->
+            <?php if ($_SESSION['is_admin']): ?>
+                <!-- Somente para admins -->
+                <p><a href="view_backlog.php">Login Backlog</a></p>
+
+                <p><a href="manage_requests.php">Gerenciar Chamados</a></p>
+            <?php endif; ?>
+
+            <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
         </nav>
     </header>
-    <h2>Login Backlog</h2>
-    <?php if (empty($loginBacklog)): ?>
-        <!-- If there is no backlog, print message -->
-        <p>No login records available.</p>
-    <?php else: ?>
+    <main>
+        <section>
 
-        <!-- Table with the backlog -->
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Name</th>
-                    <th>Date and Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($loginBacklog as $entry): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($entry['username']); ?></td>
-                        <td><?php echo htmlspecialchars($entry['nome']); ?></td>
-                        <td><?php echo htmlspecialchars($entry['datetime']); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-                <!-- End of iterarion -->
-            </tbody>
-        </table>
-    <?php endif; ?>
-    <br>
+            <?php if (empty($loginBacklog)): ?>
+                <!-- If there is no backlog, print message -->
+                <p>Não há dados disponíveis.</p>
+            <?php else: ?>
+
+                <!-- Table with the backlog -->
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Name</th>
+                            <th>Date and Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($loginBacklog as $entry): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($entry['username']); ?></td>
+                                <td><?php echo htmlspecialchars($entry['nome']); ?></td>
+                                <td><?php echo htmlspecialchars($entry['datetime']); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        <!-- End of iterarion -->
+                    </tbody>
+                </table>
+            <?php endif; ?>
+            <br>
+        </section>
+    </main>
     <!-- <a href="home.php">Voltar</a><br><br>
     <a href="logout.php">Sair</a> -->
 </body>
