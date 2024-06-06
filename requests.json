@@ -1,1 +1,34 @@
-[]
+[
+    {
+        "assunto": "raio x",
+        "setor": "raio x",
+        "descricao": "PLacas Offiline",
+        "datetime": "2024-06-06 09:28:07",
+        "username": "admin",
+        "status": "solucionado"
+    },
+    {
+        "assunto": "convenio",
+        "setor": "assesoria",
+        "descricao": "",
+        "datetime": "2024-06-06 09:32:29",
+        "username": "1076",
+        "status": "pendente"
+    },
+    {
+        "assunto": "convenio",
+        "setor": "assesoria",
+        "descricao": "",
+        "datetime": "2024-06-06 09:33:50",
+        "username": "1076",
+        "status": "pendente"
+    },
+    {
+        "assunto": "leitor de biometria",
+        "setor": "CME",
+        "descricao": "",
+        "datetime": "2024-06-06 09:39:01",
+        "username": "1076",
+        "status": "pendente"
+    }
+]

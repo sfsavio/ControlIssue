@@ -2,17 +2,21 @@
 session_start(); // Start a new session or resume an existing session
 
 // Function to load users from the JSON file
-function loadUsers() {
+function loadUsers()
+{
     $filename = 'users.json';
     if (!file_exists($filename)) {
-        return []; // Return an empty array if the file does not exist
+        return []; // Return an empty array if the file does not exist, then create the file 'nd add []
     }
     $data = file_get_contents($filename); // Read the file contents
     return json_decode($data, true); // Decode the JSON data into a PHP array
 }
 
+// json_Decode($file, bool) -> Recebe uma string codificada em JSON e converte em um valor do PHP
+
 // Function to load login backlog from the JSON file
-function loadLoginBacklog() {
+function loadLoginBacklog()
+{
     $filename = 'login_backlog.json';
     if (!file_exists($filename)) {
         return []; // Return an empty array if the file does not exist
@@ -22,17 +26,18 @@ function loadLoginBacklog() {
 }
 
 // Function to save login backlog to the JSON file
-function saveLoginBacklog($data) {
+function saveLoginBacklog($data)
+{
     $filename = 'login_backlog.json';
-    file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT)); // Encode and save the data
+    file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT)); // Encode and save the data in the json
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Get the users data and make comparisons
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     if (empty($username) || empty($password)) {
-        header('Location: index.php?error=Username and password are required!');
+        header('Location: index.php?error=Username and password are required!'); // Redirect to error page
         exit;
     }
 
@@ -45,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user['username'] === $username && $user['password'] === $password) {
             $_SESSION['username'] = $username; // Set the session username
             $_SESSION['nome'] = $user['nome']; // Set the session name
-            $_SESSION['is_admin'] = $user['is_admin']; // Set the session is_admin
+            $_SESSION['is_admin'] = $user['is_admin']; // Get the boolean value 
 
             // Add login entry to the backlog
             $loginBacklog = loadLoginBacklog(); // Load existing backlog
