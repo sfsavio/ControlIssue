@@ -56,7 +56,7 @@ $requests = loadRequests(); // Load existing requests
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Refresh page every N seconds -->
-    <!-- <meta http-equiv="refresh" content="5"> -->
+    <meta http-equiv="refresh" content="10">
     <title>Manage Requests</title>
     <link rel="stylesheet" type="text/css" href="./styles/manage_requests.css">
     <link rel="stylesheet" type="text/css" href="./styles/view_requests.css">
@@ -70,7 +70,7 @@ $requests = loadRequests(); // Load existing requests
 <body>
     <header>
         <nav>
-            <p><span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p>
+            <p id="topo"><span><?php echo htmlspecialchars($_SESSION['nome']); ?>!</span></p>
             <!-- Display the user's name -->
             <!-- Para todos os usuários -->
             <p class="home_shortcut"><a href="home.php">Início</a></p>
@@ -84,6 +84,7 @@ $requests = loadRequests(); // Load existing requests
 
                 <p><a href="manage_requests.php">Gerenciar Chamados</a></p>
             <?php endif; ?>
+            <p><a href="#fim">Final</a></p>
 
             <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
         </nav>
@@ -143,6 +144,8 @@ $requests = loadRequests(); // Load existing requests
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                <p id="fim" style="color: white;">Fim</p>
+                <p><a href="#topo">topo</a></p>
             <?php endif; ?>  
             <br>
 

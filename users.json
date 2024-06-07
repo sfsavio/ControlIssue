@@ -1,7 +1,7 @@
 [
     {
         "username": "admin",
-        "password": "Ms0405",
+        "password": "password",
         "nome": "Sávio - Administrador",
         "is_admin": true
     },
@@ -13,7 +13,7 @@
     },
     {
         "username": "1024",
-        "password": "1234",
+        "password": "aff2024*",
         "nome": "Aguida",
         "is_admin": false
     },
