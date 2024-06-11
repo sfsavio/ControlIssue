@@ -72,6 +72,9 @@ main section table tbody {
 main section table tbody tr:hover {
 	background-color: lightgrey;
 }
+main section table tbody tr {
+	height: 60px;
+}
 
 main section select {
 	border: none;
@@ -90,4 +93,19 @@ main section select {
 	background: darkolivegreen;
 	/* padding: 20px; */
 	cursor: pointer;
+  }
+
+  tbody .up form {
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+  	height: 100%;
+/*  	background-color: red;*/
+  }
+  tbody .up {
+  	height: 100%;
+  }
+
+  tbody .up form input, tbody .up form select{
+  	height: 50%;
   }

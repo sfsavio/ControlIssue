@@ -84,7 +84,7 @@ $requests = loadRequests(); // Load existing requests
 
                 <p><a href="manage_requests.php">Gerenciar Chamados</a></p>
             <?php endif; ?>
-            <p><a href="#fim">Final</a></p>
+            <!-- <p><a href="#fim">Final</a></p> -->
 
             <p><a href="logout.php">Sair</a></p> <!-- Logout link -->
         </nav>
@@ -99,7 +99,7 @@ $requests = loadRequests(); // Load existing requests
             }
             ?>
             <?php if (empty($requests)): ?>
-                <p>No requests available.</p>
+                <p>Não há ordens de serviço abertas.</p>
             <?php else: ?>
                 <table border="1">
                     <thead>
@@ -127,7 +127,7 @@ $requests = loadRequests(); // Load existing requests
                                 <td><?php echo htmlspecialchars($request['datetime']); ?></td>
                                 <td><?php echo htmlspecialchars($request['username']); ?></td>
                                 <!-- <td><?php echo htmlspecialchars($request['status']); ?></td> -->
-                                <td>
+                                <td class="up">
                                     <form action="manage_requests.php" method="post" style="display: flex; flex-direction: column; text-align: center;">
                                         <input type="hidden" name="request_id" value="<?php echo $index; ?>">
                                         <select name="status">
@@ -144,8 +144,8 @@ $requests = loadRequests(); // Load existing requests
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <p id="fim" style="color: white;">Fim</p>
-                <p><a href="#topo">topo</a></p>
+               
+                <p id="fim"><a href="#">Voltar ao topo</a></p>
             <?php endif; ?>  
             <br>
 

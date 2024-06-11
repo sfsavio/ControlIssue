@@ -23,7 +23,7 @@ $loginBacklog = array_reverse($loginBacklog); // Inverte a ordem do array para e
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
