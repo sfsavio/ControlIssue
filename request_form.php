@@ -2,7 +2,7 @@
 session_start(); // Start a new session or resume an existing session
 date_default_timezone_set('America/Sao_Paulo'); // Set the right timezone
 // Check if the user is logged in
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username'])) { // Checa se "username" é <>
     header('Location: index.php'); // Redirect to index.php if not logged in
     exit;
 }
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">

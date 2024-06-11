@@ -1,12 +1,12 @@
 <?php
-session_start(); // Start a new session or resume an existing session
+session_start(); // Start a new session or - resume - an existing session
 
 // Function to load users from the JSON file
 function loadUsers()
 {
     $filename = 'users.json';
-    if (!file_exists($filename)) {
-        return []; // Return an empty array if the file does not exist, then create the file 'nd add []
+    if (!file_exists($filename)) { // Checks if the file exists - file_exists($filename)
+        return []; // Return an empty array if the file or directory does not exist, then create the file 'nd add []
     }
     $data = file_get_contents($filename); // Read the file contents
     return json_decode($data, true); // Decode the JSON data into a PHP array
@@ -23,6 +23,7 @@ function loadLoginBacklog()
     }
     $data = file_get_contents($filename); // Read the file contents
     return json_decode($data, true); // Decode the JSON data into a PHP array
+    // json_decode($var, true or false) --> Quando true, objetos JSON serão retornados como arrays associativo; quando false, objetos JSON serão retornados como objects.
 }
 
 // Function to save login backlog to the JSON file
@@ -30,6 +31,7 @@ function saveLoginBacklog($data)
 {
     $filename = 'login_backlog.json';
     file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT)); // Encode and save the data in the json
+    //json_encode() --> Retorna a representação JSON de um valor
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Get the users data and make comparisons

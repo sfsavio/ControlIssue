@@ -3,7 +3,8 @@ session_start(); // Inicia a sessão
 
 // Checa se tem uma mensagem de erro vinda de 'login.php'
 $error_message = '';
-if (isset($_GET['error'])) {
+
+if (isset($_GET['error'])) { // check if 
     $error_message = htmlspecialchars($_GET['error']);
 }
 ?>
@@ -13,7 +14,7 @@ if (isset($_GET['error'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>SccDeskManager - Login</title>
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
